@@ -8,4 +8,10 @@ public class Hello {
     public void getMessage() {
         System.out.println("your message is " + message);
     }
+    public void init(){
+        System.out.println("Bean is going through init");
+    }
+    public void destroy(){
+        System.out.println("Bean will destroy now");
+    }
 }
