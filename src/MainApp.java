@@ -11,12 +11,11 @@ public class MainApp {
 //        ApplicationContext context=new ClassPathXmlApplicationContext("Beans.xml");
 //        Hello hello=(Hello)context.getBean("hello");
         //ApplicationContext context=new FileSystemXmlApplicationContext("src/Beans.xml");
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans_2.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
 
-        Hello initHello = (Hello) context.getBean("initHello");
-        initHello.getMessage();
-        Hello destroyHello = (Hello) context.getBean("destructHello");
-        destroyHello.getMessage();
+        Hello hello = (Hello) context.getBean("hello");
+        hello.getMessage();
+
         context.registerShutdownHook();
     }
 }
