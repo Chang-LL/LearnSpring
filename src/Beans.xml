@@ -2,10 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-        <bean id="textEditor" class="TextEditor" autowire="byType">
-            <property name="name" value="Generic Text Editor">
-
-            </property>
+        <bean id="textEditor" class="TextEditor" autowire="constructor">
+            <constructor-arg value="John"/>
         </bean>
     <bean id="spellChecker" class="SpellChecker">
 
