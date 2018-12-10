@@ -2,11 +2,19 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="hello" class="Hello"
-          init-method="init" destroy-method="destroy">
-        <property name="message" value="Hello Spring">
+    <bean id="hello" class="Hello">
+        <property name="message1" value="Hello World">
+        </property>
+        <property name="message2" value="Hello Second World">
 
         </property>
     </bean>
-    <bean class="InitHello"/>
+    <bean id="helloIndia" class="HelloIndia" parent="hello">
+        <property name="message1" value="hello india">
+
+        </property>
+        <property name="message3" value="Namaste India">
+
+        </property>
+    </bean>
 </beans>
