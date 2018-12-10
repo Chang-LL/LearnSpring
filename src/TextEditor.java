@@ -5,9 +5,12 @@ public class TextEditor {
         spellChecker.checkSpelling();
     }
 
-    public TextEditor(SpellChecker spellChecker, int val) {
-        System.out.println("Inside TextEditor constructor" +
-                " val is " + val);
+    public SpellChecker getSpellChecker() {
+        return spellChecker;
+    }
+
+    public void setSpellChecker(SpellChecker spellChecker) {
+        System.out.println("Inside set Spellchecker");
         this.spellChecker = spellChecker;
     }
 }
