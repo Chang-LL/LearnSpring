@@ -1,17 +1,20 @@
 public class Hello {
-    private String message;
-
-    public void setMessage(String message) {
-        this.message = message;
+    private String message1;
+    private String message2;
+    public void setMessage1(String message1) {
+        this.message1 = message1;
     }
 
-    public void getMessage() {
-        System.out.println("your message is " + message);
+    public void getMessage1() {
+        System.out.println("your message1 is " + message1);
     }
-    public void init(){
-        System.out.println("Bean is going through init");
+
+    public void getMessage2() {
+        System.out.println("your message2 is " + message2);
     }
-    public void destroy(){
-        System.out.println("Bean will destroy now");
+
+    public void setMessage2(String message2) {
+        this.message2 = message2;
     }
+
 }
