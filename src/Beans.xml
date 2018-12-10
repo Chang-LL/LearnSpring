@@ -4,8 +4,6 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:annotation-config/>
-    <bean id="student" class="Student">
-        <property name="name" value="Zae"/>
-            <property name="age" value="11"/>
-    </bean>
+    <bean id="textEditor" class="TextEditor"/>
+    <bean id="spellChecker" class="SpellChecker"/>
 </beans>
