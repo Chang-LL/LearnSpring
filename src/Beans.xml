@@ -31,12 +31,7 @@
             </map>
         </property>
         <property name="addressProp">
-            <props>
-                <prop key="two">INDIA</prop>
-                <prop key="two">PAKISTAN</prop>
-                <prop key="three">USA</prop>
-                <prop key="four">USA</prop>
-            </props>
+            <null/>
         </property>
     </bean>
 </beans>
