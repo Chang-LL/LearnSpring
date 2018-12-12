@@ -1,12 +1,13 @@
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
     public static void main(String[] args) {
-        ApplicationContext context
+        ConfigurableApplicationContext context
                 = new ClassPathXmlApplicationContext("Beans.xml");
-        StudentProfile profile = (StudentProfile) context.getBean("profile");
-        profile.printAge();
-        profile.printName();
+        context.start();
+        Hello hello=(Hello)context.getBean("hello");
+        hello.getMessage();
+        context.stop();
     }
 }
