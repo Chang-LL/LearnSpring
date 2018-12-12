@@ -5,9 +5,9 @@ public class MainApp {
     public static void main(String[] args) {
         ConfigurableApplicationContext context
                 = new ClassPathXmlApplicationContext("Beans.xml");
-        context.start();
-        Hello hello=(Hello)context.getBean("hello");
-        hello.getMessage();
-        context.stop();
+        CustomEventPublisher customEventPublisher=
+                (CustomEventPublisher)context.getBean("customEventPublisher");
+        customEventPublisher.publish();
+        customEventPublisher.publish();
     }
 }
